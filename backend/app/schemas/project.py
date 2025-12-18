@@ -6,7 +6,7 @@ from datetime import date
 class ProjectCreate(BaseModel):
     name: str = Field(..., min_length=3)
     client: str
-    project_type: str  # PoC | Full | Side
+    type: str  # PoC | Full | Side 
     total_tasks: int = Field(..., ge=0)
     sla_deadline: date
     required_expertise: List[str]

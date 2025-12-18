@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware  # ← ADD THIS
 from app.api.projects import router as project_router
 from app.api.allocations import router as allocation_router
 from app.api.leaves import router as leave_router
@@ -7,7 +8,11 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="Autonex Resource Planning API")
 
+<<<<<<< HEAD
 # CORS for frontend
+=======
+# ← ADD CORS (BEFORE ROUTER)
+>>>>>>> main
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000"],
@@ -16,7 +21,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+<<<<<<< HEAD
 # Include routers
 app.include_router(project_router)
 app.include_router(allocation_router)
 app.include_router(leave_router)
+=======
+app.include_router(project_router)
+
+@app.get("/")
+def root():
+    return {"message": "Autonex API", "status": "running"}
+>>>>>>> main
