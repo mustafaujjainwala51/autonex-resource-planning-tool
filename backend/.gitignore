@@ -2,3 +2,5 @@ venv/
 __pycache__/
 .env
 *.pyc
+DATABASE_URL=postgresql://neondb_owner:npg_f1uGm0ViAvRZ@ep-crimson-frog-a4dm2lpb-pooler.us-east-1.aws.neon.tech/autonex-resource-planning-tool?sslmode=require&channel_binding=require
+psql "postgresql://neondb_owner:YOUR_PASSWORD@ep-crimson-frog-a4dm2lpb-pooler.us-east-1.aws.neon.tech/autonex-resource-planning-tool?sslmode=require"
